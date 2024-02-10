@@ -1,0 +1,20 @@
+<!-- service -->
+
+<section class="bg-gray-300 h-auto text-gray-800">
+    <div class="max-w-md sm:max-w-7xl mx-auto px-4  py-10">
+        <div class="text-center mb-16">
+            <h2 class="sectionTitle">{{title}}</h2>
+            <p class="sectionSubtitle">{{subtitle}}</p>
+        </div>
+        <div class="flex space-y-10 flex-col">
+            <div class="flex  justify-center items-start gap-5 " *ngFor="let s of services; let i = index" [ngClass]="i%2 === 0 ? 'flex-row-reverse text-right': 'flex-row text-left'">
+                <img class="w-[350px]" src="../../../../assets/images/boy1.png" alt="">
+                <div class="w-1/3">
+                    <h5 class="text-gray-500 uppercase">hello design</h5>
+                    <h1 class="capitalize ">{{s.title}}</h1>
+                    <p class="text-base tracking-wide text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias possimus incidunt numquam delectus, nemo voluptatibus cum quo rem, fugiat totam similique, obcaecati inventore officiis aspernatur at sapiente nihil repellendus quidem!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
