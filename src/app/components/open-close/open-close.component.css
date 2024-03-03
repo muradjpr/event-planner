@@ -1,0 +1,9 @@
+:host{
+    display: block;
+}
+
+.open-close-container {
+    width: 200px;
+    height: 200px;
+    background: blue;
+}

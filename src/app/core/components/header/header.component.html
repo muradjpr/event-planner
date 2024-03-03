@@ -1,5 +1,5 @@
 
-<header class="fixed overflow-hidden bg-black w-screen bg-opacity-90">
+<header class="overflow-hidden bg-black w-screen bg-opacity-90">
     <nav class="max-w-md sm:max-w-7xl mx-auto px-4 h-24 md:h-30">
         <div class="flex justify-between items-center h-full relative">
             <div>
@@ -9,15 +9,16 @@
             </div>
             <div class="hidden md:block text-white">
                 <ul class="flex justify-between items-center uppercase tracking-wider gap-5">
-                    <li>
-                        <a href="">Portfolio</a>
+                    <li [@menuborder]="bordertransition" 
+                        class="hover:border-b-[2px] pb-[2px] hover:pb-0 border-yellow-500"
+                        (mouseenter)="bordertransition = 'mouseover'" 
+                        (mouseleave)="bordertransition = 'mouseleave'" 
+                        *ngFor="let menu of menuItems; let i = index">
+                        <a routerLink="{{menu.url}}" routerLinkActive="text-yellow-500">{{menu.text}}</a>
+                        <!-- <div class="w-16 border-[2px] border-yellow-500 mt-2"></div> -->
                     </li>
-                    <li>
-                        <a href="">Services</a>
-                    </li>
-                    <li>
-                        <a href="">Contact Us</a>
-                    </li>
+
+                    <button class="btn-primary uppercase text-sm" routerLink="/contact">BOok now</button>
                 </ul>
             </div>
             <div class="absolute top-0 left-0 w-full py-5 bg-slate-950 flex flex-col justify-center items-center gap-5 transition-all duration-300" *ngIf="isOpen">
